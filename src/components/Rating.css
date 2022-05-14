@@ -1,0 +1,15 @@
+.main-body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-card {
+    width: 30%;
+    height: 40%;
+    background-color: var(--clr-dark-blue);
+    padding: 1rem;
+    border-radius: 1rem;
+    color: var(--clr-white);
+}
