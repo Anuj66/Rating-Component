@@ -5,35 +5,36 @@ import RatingCard from "./RatingCard";
 
 const Rating = () => {
     const [rating, setRating] = useState(0);
+    const [isSelected, setIsSelected] = useState(false)
 
     useEffect(() => {
-        console.log(rating);
-    }, [rating]);
+
+    }, [rating])
 
     return (
         <div className={'main-body'}>
             <div className={'main-card'}>
                 <div className="image-star">
-                    <button className={'starBtn'}>
+                    <button className={'starBtn btn'}>
                         <img src={iconStar} alt=""/>
                     </button>
                 </div>
                 <div className="template">
-                    <h3>How did we do?</h3>
-                    <p>
+                    <h3 className={'template-header'}>How did we do?</h3>
+                    <p className={'template-paragraph'}>
                         Please let us know how we did with your support request. All feedback
                         is appreciated to help us improve our offering!
                     </p>
                 </div>
                 <div className="ratingCard-div">
-                    <RatingCard num="1" setRating={setRating}/>
-                    <RatingCard num="2" setRating={setRating}/>
-                    <RatingCard num="3" setRating={setRating}/>
-                    <RatingCard num="4" setRating={setRating}/>
-                    <RatingCard num="5" setRating={setRating}/>
+                    <RatingCard num="1" setRating={setRating} rating={rating}/>
+                    <RatingCard num="2" setRating={setRating} rating={rating}/>
+                    <RatingCard num="3" setRating={setRating} rating={rating}/>
+                    <RatingCard num="4" setRating={setRating} rating={rating}/>
+                    <RatingCard num="5" setRating={setRating} rating={rating}/>
                 </div>
                 <div className="submitBtn-div">
-                    <button className="submitBtn">Submit</button>
+                    <button className="submitBtn btn">SUBMIT</button>
                 </div>
             </div>
         </div>

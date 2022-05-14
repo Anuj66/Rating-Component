@@ -1,0 +1,30 @@
+.ratingBtn {
+    border-radius: 100%;
+    padding: 0.5rem;
+    width: 3rem;
+    aspect-ratio: 1/1;
+    border: none;
+    background-color: var(--clr-gark-grey);
+    color: var(--clr-medium-grey);
+    /*margin: 1rem auto;*/
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 100ms ease;
+    -moz-animation: all 100ms ease;
+}
+
+.ratingBtn:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+}
+
+.selectedBtn {
+    background-color: #363679;
+    color: var(--clr-white);
+}
+
+.regularBtn {
+    background-color: var(--clr-gark-grey);
+    color: var(--clr-medium-grey);
+}
+
