@@ -2,14 +2,20 @@ import "./Rating.css";
 import iconStar from "../images/icon-star.svg";
 import {useEffect, useState} from "react";
 import RatingCard from "./RatingCard";
+import { useNavigate } from 'react-router-dom'
 
-const Rating = () => {
-    const [rating, setRating] = useState(0);
-    const [isSelected, setIsSelected] = useState(false)
+const Rating = (props) => {
+
+    const {rating, setRating} = props
+    const navigate = useNavigate()
 
     useEffect(() => {
 
     }, [rating])
+
+    const onSubmitHandler = () => {
+        navigate('/thankyou')
+    }
 
     return (
         <div className={'main-body'}>
@@ -27,14 +33,29 @@ const Rating = () => {
                     </p>
                 </div>
                 <div className="ratingCard-div">
-                    <RatingCard num="1" setRating={setRating} rating={rating}/>
-                    <RatingCard num="2" setRating={setRating} rating={rating}/>
-                    <RatingCard num="3" setRating={setRating} rating={rating}/>
-                    <RatingCard num="4" setRating={setRating} rating={rating}/>
-                    <RatingCard num="5" setRating={setRating} rating={rating}/>
+                    <RatingCard
+                        num="1"
+                        setRating={setRating}
+                        rating={rating}/>
+                    <RatingCard
+                        num="2"
+                        setRating={setRating}
+                        rating={rating}/>
+                    <RatingCard
+                        num="3"
+                        setRating={setRating}
+                        rating={rating}/>
+                    <RatingCard
+                        num="4"
+                        setRating={setRating}
+                        rating={rating}/>
+                    <RatingCard
+                        num="5"
+                        setRating={setRating}
+                        rating={rating}/>
                 </div>
-                <div className="submitBtn-div">
-                    <button className="submitBtn btn">SUBMIT</button>
+                <div className="submitBtn-div" onClick={onSubmitHandler}>
+                    <button className="submitBtn btn" onClick={onSubmitHandler}>SUBMIT</button>
                 </div>
             </div>
         </div>

@@ -4,13 +4,12 @@
     width: 3rem;
     aspect-ratio: 1/1;
     border: none;
-    background-color: var(--clr-gark-grey);
-    color: var(--clr-medium-grey);
     /*margin: 1rem auto;*/
     font-weight: 700;
     font-size: 15px;
     transition: all 100ms ease;
     -moz-animation: all 100ms ease;
+    cursor: pointer;
 }
 
 .ratingBtn:hover {
@@ -28,3 +27,8 @@
     color: var(--clr-medium-grey);
 }
 
+@media screen and (max-width: 375px) {
+    .ratingBtn {
+        font-size: 0.8rem;
+    }
+}

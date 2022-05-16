@@ -19,3 +19,25 @@ body {
 .btn {
   font-family: "Overpass", sans-serif;
 }
+
+.main-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.main-card {
+  width: 25%;
+  /*height: 40%;*/
+  background-color: var(--clr-dark-blue);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  color: var(--clr-white);
+}
+
+@media screen and (max-width: 375px) {
+  .main-card {
+    width: 70%;
+  }
+}
